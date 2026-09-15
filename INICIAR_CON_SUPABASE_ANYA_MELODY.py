@@ -39,15 +39,7 @@ def init_db_with_anya():
             (sol['id'],)
         )
 
-    # Agrega Melody como quinto empleado si todavía no existe.
-    melody = cursor.execute(
-        "SELECT id FROM employees WHERE name='Melody'"
-    ).fetchone()
-    if not melody:
-    cursor.execute(
-        "INSERT INTO employees (name, password) VALUES (?, ?)",
-        ("Melody", "Melody2026")
-    )
+   
 
     connection.commit()
     connection.close()
