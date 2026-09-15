@@ -44,10 +44,10 @@ def init_db_with_anya():
         "SELECT id FROM employees WHERE name='Melody'"
     ).fetchone()
     if not melody:
-        cursor.execute(
-            "INSERT INTO employees (name) VALUES (?)",
-            ("Melody",),
-        )
+    cursor.execute(
+        "INSERT INTO employees (name, password) VALUES (?, ?)",
+        ("Melody", "Melody2026")
+    )
 
     connection.commit()
     connection.close()
