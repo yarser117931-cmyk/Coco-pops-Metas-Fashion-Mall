@@ -53,8 +53,8 @@ def required_pin_env():
         'ADMIN_PIN':'Dirección',
         'ITZEL_PIN':'Itzel',
         'EDUARDO_PIN':'Eduardo',
-        'DIEGO_PIN':'Diego',
-        'VIANNEY_PIN':'Vianney',
+        'DIEGO_PIN':'Lesly',
+        'VIANNEY_PIN':'Anya',
     }
     vals = {}
     missing = []
