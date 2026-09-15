@@ -100,7 +100,7 @@ def init_db():
     CREATE TABLE IF NOT EXISTS audit(id INTEGER PRIMARY KEY AUTOINCREMENT, ts TEXT NOT NULL, action TEXT NOT NULL, detail TEXT);
     ''')
     pins = required_pin_env()
-    employees=[('Itzel',pins['ITZEL_PIN']),('Eduardo',pins['EDUARDO_PIN']),('Diego',pins['DIEGO_PIN']),('Vianney',pins['VIANNEY_PIN'])]
+    employees=[('Itzel',pins['ITZEL_PIN']),('Eduardo',pins['EDUARDO_PIN']),('Lesly',pins['DIEGO_PIN']),('Anya',pins['VIANNEY_PIN'])]
     for name,pin in employees:
         cur.execute('INSERT OR IGNORE INTO employees(name,pin_hash) VALUES(?,?)',(name,hpin(pin)))
         cur.execute('UPDATE employees SET pin_hash=? WHERE name=?',(hpin(pin),name))
